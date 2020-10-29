@@ -1,11 +1,7 @@
 import React from 'react';
 import PropyTypes from 'prop-types';
 import { Card, Image } from 'react-bootstrap';
-
-const cardHorizontal = {
-  display: 'flex',
-  flex: '1 1 auto',
-};
+import HorizontalCard from '../../../hoc/HorizontalCard/HorizontalCard';
 
 const ImageStyle = {
   maxWidth: '15%',
@@ -15,17 +11,15 @@ const ImageStyle = {
 
 export default function Post(props) {
   return (
-    <Card className="m-1">
-      <div style={cardHorizontal}>
-        {props.image !== '' ? (
-          <Image src={props.image} style={ImageStyle} />
-        ) : null}
-        <Card.Body className="text-left">
-          <Card.Title>{props.user}</Card.Title>
-          <Card.Text>{props.body}</Card.Text>
-        </Card.Body>
-      </div>
-    </Card>
+    <HorizontalCard>
+      {props.image !== '' ? (
+        <Image src={props.image} style={ImageStyle} />
+      ) : null}
+      <Card.Body className="text-left">
+        <Card.Title>{props.user}</Card.Title>
+        <Card.Text>{props.body}</Card.Text>
+      </Card.Body>
+    </HorizontalCard>
   );
 }
 
