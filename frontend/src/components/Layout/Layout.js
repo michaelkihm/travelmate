@@ -4,7 +4,7 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 export default function Layout(props) {
   return (
     <Fragment>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" className={'mb-2'}>
         <Navbar.Brand href="#home">Travelmate</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
