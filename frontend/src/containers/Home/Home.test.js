@@ -7,6 +7,7 @@ import { Row, Col } from 'react-bootstrap';
 import ProfileInfo from '../../components/ProfileInfo/ProfileInfo';
 import NextTravels from '../../components/NextTravels/NextTravels';
 import Interests from '../../components/Interests/Interests';
+import Posts from '../../components/Posts/Posts';
 
 configure({ adapter: new Adapter() });
 
@@ -16,12 +17,12 @@ describe('<Home />', () => {
     wrapper = shallow(<Home />);
   });
 
-  it('Should include one row', () => {
-    expect(wrapper.find(Row)).toHaveLength(1);
+  it('Should include 2 <Row />', () => {
+    expect(wrapper.find(Row)).toHaveLength(2);
   });
 
-  it('Should include three Cols', () => {
-    expect(wrapper.find(Col)).toHaveLength(3);
+  it('Should include 4 Cols', () => {
+    expect(wrapper.find(Col)).toHaveLength(4);
   });
 
   it('Should include one <ProfileInfo />', () => {
@@ -34,5 +35,9 @@ describe('<Home />', () => {
 
   it('Should include one <Interests />', () => {
     expect(wrapper.find(Interests)).toHaveLength(1);
+  });
+
+  it('Should include one <Posts />', () => {
+    expect(wrapper.find(Posts)).toHaveLength(1);
   });
 });
