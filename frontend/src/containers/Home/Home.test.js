@@ -8,6 +8,7 @@ import ProfileInfo from '../../components/ProfileInfo/ProfileInfo';
 import NextTravels from '../../components/NextTravels/NextTravels';
 import Interests from '../../components/Interests/Interests';
 import Posts from '../../components/Posts/Posts';
+import PotentailTravelMates from '../../components/PotentailTravelMates/PotentailTravelMates';
 
 configure({ adapter: new Adapter() });
 
@@ -39,5 +40,9 @@ describe('<Home />', () => {
 
   it('Should include one <Posts />', () => {
     expect(wrapper.find(Posts)).toHaveLength(1);
+  });
+
+  it('Should include one <PotentailTravelMates />', () => {
+    expect(wrapper.find(PotentailTravelMates)).toHaveLength(1);
   });
 });

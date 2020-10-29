@@ -3,6 +3,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 import Interests from '../../components/Interests/Interests';
 import NextTravels from '../../components/NextTravels/NextTravels';
 import Posts from '../../components/Posts/Posts';
+import PotentailTravelMates from '../../components/PotentailTravelMates/PotentailTravelMates';
 import ProfileInfo from '../../components/ProfileInfo/ProfileInfo';
 
 const Travels = ['India', 'Spain', 'Italy'];
@@ -19,6 +20,21 @@ const posts = [
     img: 'https://s.hdnux.com/photos/01/11/47/50/19298838/3/1200x0.jpg',
   },
 ];
+
+const travelMates = [
+  { user: 'Mike', reason: 'Will go to India' },
+  {
+    user: 'Donny',
+    reason: 'Will go to Vietnam',
+    img: 'https://s3.amazonaws.com/cdn.gurneys.com/images/500/64587A_1.jpg',
+  },
+  {
+    user: 'Anna',
+    reason: 'Will be in Taiwan',
+    img: 'https://s3.amazonaws.com/cdn.gurneys.com/images/500/64587A_1.jpg',
+  },
+];
+
 export class Home extends Component {
   state = {
     profileImg: profImg,
@@ -27,6 +43,7 @@ export class Home extends Component {
     name: 'Bill Gates',
     infoText: "Hello I'm the guy behind Windows OS",
     posts: posts,
+    travelMates: travelMates,
   };
   render() {
     return (
@@ -42,7 +59,9 @@ export class Home extends Component {
             <Interests interests={this.state.interests} />
           </Col>
           <Col>Map</Col>
-          <Col>col3</Col>
+          <Col>
+            <PotentailTravelMates travelMates={this.state.travelMates} />
+          </Col>
         </Row>
         <Row className="m-2">
           <Col>
