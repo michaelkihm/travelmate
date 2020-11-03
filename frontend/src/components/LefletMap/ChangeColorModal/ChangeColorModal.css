@@ -1,0 +1,9 @@
+.hoverRow {
+    cursor: pointer;
+}
+
+.hoverRow:hover {
+    background-color: rgb(102, 204, 255);
+    cursor: pointer;
+    border-style: dotted;
+}

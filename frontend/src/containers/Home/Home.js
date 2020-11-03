@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import Interests from '../../components/Interests/Interests';
+import LeafletMap from '../../components/LefletMap/LeafletMap';
 import NextTravels from '../../components/NextTravels/NextTravels';
 import Posts from '../../components/Posts/Posts';
 import PotentailTravelMates from '../../components/PotentailTravelMates/PotentailTravelMates';
@@ -58,7 +59,9 @@ export class Home extends Component {
             <NextTravels nextTravels={this.state.nextTravels} />
             <Interests interests={this.state.interests} />
           </Col>
-          <Col>Map</Col>
+          <Col>
+            <LeafletMap />
+          </Col>
           <Col>
             <PotentailTravelMates travelMates={this.state.travelMates} />
           </Col>

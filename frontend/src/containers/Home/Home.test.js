@@ -9,6 +9,7 @@ import NextTravels from '../../components/NextTravels/NextTravels';
 import Interests from '../../components/Interests/Interests';
 import Posts from '../../components/Posts/Posts';
 import PotentailTravelMates from '../../components/PotentailTravelMates/PotentailTravelMates';
+import LeafletMap from '../../components/LefletMap/LeafletMap';
 
 configure({ adapter: new Adapter() });
 
@@ -44,5 +45,9 @@ describe('<Home />', () => {
 
   it('Should include one <PotentailTravelMates />', () => {
     expect(wrapper.find(PotentailTravelMates)).toHaveLength(1);
+  });
+
+  it('Should include one <LeafletMap />', () => {
+    expect(wrapper.find(LeafletMap)).toHaveLength(1);
   });
 });

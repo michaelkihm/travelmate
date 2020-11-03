@@ -5,6 +5,7 @@ import ProfileInfo from '../../components/ProfileInfo/ProfileInfo';
 import NextTravels from '../../components/NextTravels/NextTravels';
 import Interests from '../../components/Interests/Interests';
 import Posts from '../../components/Posts/Posts';
+import LeafletMap from '../../components/LefletMap/LeafletMap';
 
 const Travels = ['India', 'Spain', 'Italy'];
 const profImg =
@@ -43,7 +44,9 @@ export default class Profile extends Component {
             <NextTravels nextTravels={this.state.nextTravels} />
             <Interests interests={this.state.interests} />
           </Col>
-          <Col>Map</Col>
+          <Col>
+            <LeafletMap />
+          </Col>
         </Row>
 
         <Row>

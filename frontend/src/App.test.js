@@ -9,6 +9,8 @@ import Home from './containers/Home/Home';
 import Profile from './containers/Profile/Profile';
 import NotFound from './components/NotFound/NotFound';
 
+jest.mock('leaflet');
+
 configure({ adapter: new Adapter() });
 
 describe('<App />', () => {
