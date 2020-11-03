@@ -6,7 +6,7 @@ export default function NotFound() {
     <Jumbotron>
       <h1>404</h1>
       <h2>UH OH! You're lost</h2>
-      <p>This page you are looking does not exist!</p>
+      <p>This page you are looking for does not exist! :(</p>
     </Jumbotron>
   );
 }
