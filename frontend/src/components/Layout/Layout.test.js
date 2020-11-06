@@ -3,7 +3,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 
 import Layout from './Layout';
-import { Nav } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 configure({ adapter: new Adapter() });
 
@@ -14,20 +14,33 @@ describe('<Layout />', () => {
   });
 
   it('Should include Home', () => {
-    expect(wrapper.contains(<Nav.Link href="#home">Home</Nav.Link>)).toEqual(
-      true
-    );
+    console.log(wrapper);
+    expect(
+      wrapper.contains(
+        <NavLink className="nav-link" to="/home">
+          Home
+        </NavLink>
+      )
+    ).toEqual(true);
   });
 
   it('Should include Profile', () => {
     expect(
-      wrapper.contains(<Nav.Link href="#features">Profile</Nav.Link>)
+      wrapper.contains(
+        <NavLink className="nav-link" to="/profile">
+          Profile
+        </NavLink>
+      )
     ).toEqual(true);
   });
 
   it('Should include Mesages', () => {
     expect(
-      wrapper.contains(<Nav.Link href="#pricing">Mesages</Nav.Link>)
+      wrapper.contains(
+        <NavLink className="nav-link" to="/messages">
+          Messages
+        </NavLink>
+      )
     ).toEqual(true);
   });
 
