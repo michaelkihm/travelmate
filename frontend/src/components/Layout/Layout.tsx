@@ -1,8 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, ReactElement } from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-export default function Layout(props) {
+type Props = {
+children: React.ReactNode
+}
+
+export default function Layout(props: Props) : ReactElement{
   return (
     <Fragment>
       <Navbar bg="dark" variant="dark" className={'mb-2'}>
@@ -17,7 +21,7 @@ export default function Layout(props) {
           <NavLink className="nav-link" to="/profile">
             Profile
           </NavLink>
-          <NavLink className="nav-link" to="/message">
+          <NavLink className="nav-link" to="/messages">
             Messages
           </NavLink>
         </Nav>

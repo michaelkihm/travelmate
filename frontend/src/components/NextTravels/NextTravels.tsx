@@ -1,14 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React ,{FunctionComponent} from 'react';
 import { Card } from 'react-bootstrap';
 import CardStyleWrapper from '../../hoc/CardStyleWrapper';
 
-export default function NextTravels(props) {
+type Props = {
+  nextTravels: string[]
+}
+
+const NextTravels:FunctionComponent<Props> = ({nextTravels}) =>{
   return (
     <CardStyleWrapper>
       <Card.Title>Next Travels</Card.Title>
 
-      {props.nextTravels.map((dst, i) => (
+      {nextTravels.map((dst, i) => (
         <Card.Text key={`travel_${i}`}>
           {dst}
           <br></br>
@@ -18,6 +21,4 @@ export default function NextTravels(props) {
   );
 }
 
-NextTravels.propTypes = {
-  nextTravels: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
+export default NextTravels

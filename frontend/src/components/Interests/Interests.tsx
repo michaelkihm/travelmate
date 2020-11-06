@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Card, Badge } from 'react-bootstrap';
 import CardStyleWrapper from '../../hoc/CardStyleWrapper';
 
@@ -13,7 +12,11 @@ const variants = [
   'dark',
 ];
 
-export default function Interests(props) {
+type Props = {
+  interests: string[],
+}
+
+const Interests :React.FunctionComponent<Props> = ({interests}) =>{
   const badgeStyle = {
     width: '25%',
     marginRight: '2px',
@@ -22,9 +25,9 @@ export default function Interests(props) {
     <CardStyleWrapper>
       <Card.Title>Interests</Card.Title>
       <div>
-        {props.interests.map((interest, i) => (
+        {interests.map((interest, i) => (
           <Badge
-            pip="true"
+            // pip= {true}
             variant={variants[Math.floor(Math.random() * variants.length)]}
             style={badgeStyle}
             key={`interest_${i}`}
@@ -37,6 +40,4 @@ export default function Interests(props) {
   );
 }
 
-Interests.propTypes = {
-  interests: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
+export default Interests
