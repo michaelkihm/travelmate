@@ -18,7 +18,7 @@ const posts = [
   {
     user: 'Mickenhos',
     body: 'I will go to the USA',
-    img: 'https://s.hdnux.com/photos/01/11/47/50/19298838/3/1200x0.jpg',
+    image: 'https://s.hdnux.com/photos/01/11/47/50/19298838/3/1200x0.jpg',
   },
 ];
 
@@ -27,12 +27,12 @@ const travelMates = [
   {
     user: 'Donny',
     reason: 'Will go to Vietnam',
-    img: 'https://s3.amazonaws.com/cdn.gurneys.com/images/500/64587A_1.jpg',
+    image: 'https://s3.amazonaws.com/cdn.gurneys.com/images/500/64587A_1.jpg',
   },
   {
     user: 'Anna',
     reason: 'Will be in Taiwan',
-    img: 'https://s3.amazonaws.com/cdn.gurneys.com/images/500/64587A_1.jpg',
+    image: 'https://s3.amazonaws.com/cdn.gurneys.com/images/500/64587A_1.jpg',
   },
 ];
 
