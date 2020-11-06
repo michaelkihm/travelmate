@@ -3,9 +3,9 @@ import { Card, Image } from 'react-bootstrap';
 import HorizontalCard from '../../../hoc/HorizontalCard/HorizontalCard';
 
 export type Props = {
-  image: string,
   user: string,
-  reason: string
+  reason: string,
+  image?: string,
 }
 
 const ImageStyle = {

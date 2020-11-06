@@ -6,6 +6,7 @@ import NextTravels from '../../components/NextTravels/NextTravels';
 import Interests from '../../components/Interests/Interests';
 import Posts from '../../components/Posts/Posts';
 import LeafletMap from '../../components/LefletMap/LeafletMap';
+import {Props as PostType} from '../../components/Posts/Post/Post'
 
 const Travels = ['India', 'Spain', 'Italy'];
 const profImg =
@@ -22,7 +23,16 @@ const posts = [
   },
 ];
 
-export default class Profile extends Component {
+type ProfileState = {
+  profileImg: string,
+  nextTravels: string[],
+  interests: string[],
+  name: string,
+  infoText: string,
+  posts: PostType[]
+}
+
+export default class Profile extends Component<{}, ProfileState> {
   state = {
     profileImg: profImg,
     nextTravels: Travels,

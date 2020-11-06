@@ -11,7 +11,7 @@ const ImageStyle = {
 export type Props = {
   user: string,
   body: string,
-  image: string,
+  image?: string,
 }
 
 const Post:React.FunctionComponent<Props>  = ({user, body ,image})  => {

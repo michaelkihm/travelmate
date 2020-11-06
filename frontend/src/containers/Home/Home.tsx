@@ -6,6 +6,8 @@ import NextTravels from '../../components/NextTravels/NextTravels';
 import Posts from '../../components/Posts/Posts';
 import PotentailTravelMates from '../../components/PotentailTravelMates/PotentailTravelMates';
 import ProfileInfo from '../../components/ProfileInfo/ProfileInfo';
+import { Props as PostType } from '../../components/Posts/Post/Post'
+import { Props as TravelMateType} from '../../components/PotentailTravelMates/PotentialTravelMate/PotentialTravelMate'
 
 const Travels = ['India', 'Spain', 'Italy'];
 const profImg =
@@ -36,7 +38,18 @@ const travelMates = [
   },
 ];
 
-export class Home extends Component {
+type HomeState = {
+  profileImg: string,
+  nextTravels:string[],
+  interests: string[],
+  name: string,
+  infoText: string,
+  posts: PostType[],
+  travelMates: TravelMateType[],
+
+}
+
+export class Home extends Component<{}, HomeState> {
   state = {
     profileImg: profImg,
     nextTravels: Travels,
@@ -46,6 +59,7 @@ export class Home extends Component {
     posts: posts,
     travelMates: travelMates,
   };
+
   render() {
     return (
       <Container fluid>
