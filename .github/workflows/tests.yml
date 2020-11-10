@@ -6,9 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set Up Python 3.8
       - uses: actions/setup-python@v1
         with:
-        python-version: '3.8.1'
+          python-version: '3.8.1'
       - uses: dschep/install-pipenv-action@v1
       - name: Run Django unit tests
         run: |
