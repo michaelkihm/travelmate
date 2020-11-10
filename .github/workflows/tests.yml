@@ -6,12 +6,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
-      - uses: dschep/install-pipenv-action@v1
-      - name: Run Django unit tests
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.8.1'
+      - name: Install dependencies
         run: |
-          cd backend
-          pipenv install --python=3.7
+          echo "check python version"
+          python -V
+          python -m pip install --upgrade pip
+          python -m pip install pipenv
+          cd backend 
+          pipenv install 
           pipenv run ./manage.py test
   test_frontend:
     runs-on: ubuntu-latest
