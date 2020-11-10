@@ -1,0 +1,23 @@
+name: Testing
+on: push
+
+jobs:
+  test_backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Django unit tests
+        run: |
+          apt install pipenv
+          cd backend
+          pipenv install
+          python3 manage.py test
+  test_frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run React unit tests
+        run: |
+          cd frontend
+          npm install
+          npm test
