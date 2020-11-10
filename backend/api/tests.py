@@ -6,7 +6,7 @@ import json
 italy_str = "Italy"
 spain_str = "Spain"
 germany_str = 'Germany'
-usa_str = 'USA'
+usa_str = 'United States'
 
 
 class TestUserRoute(APITestCase):
