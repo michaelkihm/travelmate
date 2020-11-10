@@ -6,7 +6,7 @@ import json
 italy_str = "Italy"
 spain_str = "Spain"
 germany_str = 'Germany'
-usa_str = 'United States'
+usa_str = 'USA'
 
 
 class TestUserRoute(APITestCase):
@@ -28,7 +28,7 @@ class TestUserRoute(APITestCase):
     def test_list_home_country_field(self):
         user = UserAcc.objects.get(id=1)
         home_country = user.home_country.name
-        self.assertEqual(home_country, 'USA')
+        self.assertEqual(home_country, usa_str)
 
     def test_user_route(self):
         url = '/api/users/1'
